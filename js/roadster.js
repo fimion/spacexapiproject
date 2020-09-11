@@ -1,7 +1,6 @@
 import { roadsterFetch } from "./fetch.js";
 
-roadsterFetch();
-
+roadsterFetch().then((roadsterResponse)=>{
     let name = document.getElementById("name");
     let launchDate = document.getElementById("launchDate");
     let launchmasskg = document.getElementById("launchmasskg");
@@ -14,3 +13,6 @@ roadsterFetch();
     let speedmi = document.getElementById("speedmi");
 
     name.innerHTML += roadsterResponse.name;
+});
+
+    
